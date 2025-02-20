@@ -11,9 +11,7 @@ constructor(props){
   render() {
     return (
       <div>
-        <h2>NgdComplnfor</h2>
-        <p> Du lieu trong state: {this.state.name}</p>
-        <h3>Hien thi du lieu tu props</h3>
+        <h2>Thong tin sinh vien</h2>
         <p>Ho va Ten: {this.props.HoVaTen}</p>
         <p>Ma Sinh Vien:{this.props.MaSV}</p>
         <p>Ngày sinh:{this.props.NgaySinh}</p>
