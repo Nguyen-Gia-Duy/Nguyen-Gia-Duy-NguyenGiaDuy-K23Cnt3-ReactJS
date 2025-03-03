@@ -7,6 +7,7 @@ import NgdEventForm5 from './components/NgdEventForm5';
 import NgdRenderCondition from './components/NgdRenderCondition';
 import NgdRenderArray from './components/NgdRenderArray';
 import NgdRenderListObject from './components/NgdRenderListObject';
+import NgdThucHanh from './components/NgdThucHanh';
 
 class NgdApp extends Component {
 
@@ -32,6 +33,7 @@ class NgdApp extends Component {
           <NgdRenderCondition/>
           <NgdRenderArray/>
           <NgdRenderListObject/>
+          <NgdThucHanh/>
       </div>
     );
   }
