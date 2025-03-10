@@ -59,8 +59,8 @@ export default class NgdForm extends Component {
 
   render() {
     return (
-      <div className="card">
-        <div className="card-body">
+      <div className="card ">
+        <div className="card-body ">
           <h3 className="card-title">{this.props.isAddingNew ? "Thêm sinh viên mới" : "Chỉnh sửa thông tin"}</h3>
           <form onSubmit={this.handleSubmit}>
 
@@ -76,7 +76,7 @@ export default class NgdForm extends Component {
 
             {/* Hiển thị mã sinh viên nhưng không cho sửa khi chỉnh sửa */}
             {!this.props.isAddingNew && (
-              <div className="form-group row">
+              <div className="form-group row ">
                 <label className="col-sm-3 col-form-label">Mã sinh viên</label>
                 <div className="col-sm-9">
                   <input type="text" className="form-control" name="ngdID" value={this.state.ngdID} readOnly />

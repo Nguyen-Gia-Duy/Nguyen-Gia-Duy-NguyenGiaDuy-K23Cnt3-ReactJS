@@ -9,11 +9,11 @@ class NgdApp extends Component {
     super(props);
     this.state = {
       ngdStudents: [
-        { ngdID: "SV001", ngdStudentName: "Nguyễn Trọng Hưng", ngdAge: 19, ngdGender: "Nam", ngdBirthday: "01/02/2005", ngdBirthPlace: "HN", ngdAddress: "Gia Lâm" },
-        { ngdID: "SV002", ngdStudentName: "Phạm Tuấn Anh", ngdAge: 19, ngdGender: "Nam", ngdBirthday: "05/11/2005", ngdBirthPlace: "QN", ngdAddress: "Yên Xá" },
-        { ngdID: "SV003", ngdStudentName: "Nguyễn Hữu Tuấn", ngdAge: 19, ngdGender: "Nam", ngdBirthday: "04/09/2005", ngdBirthPlace: "HD", ngdAddress: "Hải Dương" },
-        { ngdID: "SV004", ngdStudentName: "Nguyễn Gia Duy", ngdAge: 20, ngdGender: "Nam", ngdBirthday: "13/01/2005", ngdBirthPlace: "HD", ngdAddress: "Yên Xá" },
-        { ngdID: "SV005", ngdStudentName: "Trần Thái Linh", ngdAge: 20, ngdGender: "Nữ", ngdBirthday: "10/01/2005", ngdBirthPlace: "HCM", ngdAddress: "Long Thành" }
+        { ngdID: "SV001", ngdStudentName: "Nguyễn Gia Duy", ngdAge: 19, ngdGender: "Nam", ngdBirthday: "08/02/2005", ngdBirthPlace: "HN", ngdAddress: "Gia Lâm" },
+        { ngdID: "SV002", ngdStudentName: "Nguyen Van A", ngdAge: 19, ngdGender: "Nam", ngdBirthday: "01/12/2005", ngdBirthPlace: "QN", ngdAddress: "Yên Xá" },
+        { ngdID: "SV003", ngdStudentName: "Nguyuyen Thi B", ngdAge: 19, ngdGender: "Nam", ngdBirthday: "07/12/2005", ngdBirthPlace: "HD", ngdAddress: "Hải Dương" },
+        { ngdID: "SV004", ngdStudentName: "Nguyễn Huy Anh", ngdAge: 20, ngdGender: "Nam", ngdBirthday: "43/02/2005", ngdBirthPlace: "HD", ngdAddress: "Yên Xá" },
+        { ngdID: "SV005", ngdStudentName: "Trần Thái Linh", ngdAge: 20, ngdGender: "Nữ", ngdBirthday: "12/01/2005", ngdBirthPlace: "HCM", ngdAddress: "Long Thành" }
       ],
       filteredStudents: [],
       selectedStudent: null,
@@ -99,7 +99,7 @@ class NgdApp extends Component {
   render() {
     return (
       <div>
-        <h1 className='text-center'>Nguyen Gia DUy - K23CNT3 - Mini Project</h1>
+        <h1 className='text-center '>Nguyen Gia Duy - K23CNT3 - Mini Project</h1>
         <section className='container-fluid mt-3'>
           <div className="row">
             <div className="col-lg-7 grid-margin stretch-card">
