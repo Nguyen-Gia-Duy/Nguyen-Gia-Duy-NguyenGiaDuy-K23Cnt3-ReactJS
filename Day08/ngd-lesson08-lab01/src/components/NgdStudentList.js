@@ -1,52 +1,35 @@
-import React, { Component } from "react";
-import NgdStudent from "./NgdStudent";
+import React, { Component } from 'react';
+import NgdStudent from './NgdStudent';
 
-class NgdStudentList extends Component {
-    constructor(props){
-        super(props);
-
-    }
-        // Hàm xử lý sự kiện xêm
-    ngdHandleView = (ngdStudent)=>{
-        // Chuyển dữ liệu lên TvcApp
-        this.props.onNgdHandleView(ngdStudent);
-    }
-
-
+export default class NgdStudentList extends Component {
   render() {
-    // lấy dữ liệu trong props từ TvcApp chuyển xuống
-    let {renderNgdStudents} = this.props;
-    console.log("List:",renderNgdStudents);
-    
-    // chuyển dữ liệu vào TvcStudent để hiển thị
-    let ngdElementStudent = renderNgdStudents.map((ngdItem,index)=>{
-        return <NgdStudent key={index} renderNgdStudent={ngdItem} onNgdHandleView={this.ngdHandleView} />
-    })
-    return (
-      <div className="card-body">
-        <h3 className="card-title">Danh sách sinh viên</h3>
-        <div className="table-responsive pt-3">
-          <table className="table table-bordered">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Mã sinh viên</th>
-                <th>Tên sinh viên</th>
-                <th>Tuổi</th>
-                <th>Giới tính</th>
-                <th>Hành động</th>
-              </tr>
-            </thead>
-            <tbody>
+    let { renderNgdStudents, onNgdHandleView, onNgdHandleEdit, onNgdHandleDelete } = this.props;
 
-             {ngdElementStudent}
-              
-            </tbody>
-          </table>
-        </div>
-      </div>
+    return (
+      <table className="table table-bordered">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Mã SV</th>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          {renderNgdStudents.map((student, index) => (
+            <NgdStudent
+              key={student.ngdID}
+              ngdIndex={index + 1}
+              renderNgdStudent={student}
+              onNgdHandleView={onNgdHandleView}
+              onNgdHandleEdit={onNgdHandleEdit}
+              onNgdHandleDelete={onNgdHandleDelete}
+            />
+          ))}
+        </tbody>
+      </table>
     );
   }
 }
-
-export default NgdStudentList;
