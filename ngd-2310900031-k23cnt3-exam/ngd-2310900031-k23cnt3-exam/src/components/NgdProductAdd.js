@@ -1,30 +1,31 @@
+
+
 import React, { useState } from "react";
 
-const NgdProductAdd = ({ addMember }) => {
-    //lưu thông tin thành viên mới
-  const [newMember, setNewMember] = useState({ id: "", fullname: "", username: "", password: "" });
-  //hàm xử lý thay đổi gía trị input
+const NgdProductAdd = ({ addProduct }) => {
+  const [newProduct, setNewProduct] = useState({ ngdpid: "", ngdpname: "", ngdpquantity: "", ngdpprice: "" });
+
   const handleChange = (e) => {
-    setNewMember({ ...newMember, [e.target.name]: e.target.value });
+    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
   };
-//hàm xử lý khi gửi form thêm tv
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (newMember.id && newMember.fullname && newMember.username && newMember.password) {
-      addMember(newMember);
-      setNewMember({ id: "", fullname: "", username: "", password: "" });
+    if (newProduct.ngdpid && newProduct.ngdpname && newProduct.ngdpquantity && newProduct.ngdpprice) {
+      addProduct(newProduct);
+      setNewProduct({ ngdpid: "", ngdpname: "", ngdpquantity: "", ngdpprice: "" });
     }
   };
 
   return (
     <div className="card p-3 mt-3">
-      <h2>Thêm thành viên</h2>
+      <h2>Thêm Sản Phẩm</h2>
       <form onSubmit={handleSubmit} className="d-flex gap-2">
-        <input type="text" className="form-control" name="id" placeholder="ID" value={newMember.id} onChange={handleChange} required />
-        <input type="text" className="form-control" name="fullname" placeholder="Họ và tên" value={newMember.fullname} onChange={handleChange} required />
-        <input type="text" className="form-control" name="username" placeholder="Username" value={newMember.username} onChange={handleChange} required />
-        <input type="password" className="form-control" name="password" placeholder="Mật khẩu" value={newMember.password} onChange={handleChange} required />
-        <button type="submit" className="btn btn-primary" >Thêm</button>
+        <input type="text" className="form-control" name="ngdpid" placeholder="ID" value={newProduct.ngdpid} onChange={handleChange} required />
+        <input type="text" className="form-control" name="ngdpname" placeholder="Tên Sản Phẩm" value={newProduct.ngdpname} onChange={handleChange} required />
+        <input type="number" className="form-control" name="ngdpquantity" placeholder="Số Lượng" value={newProduct.ngdpquantity} onChange={handleChange} required />
+        <input type="number" className="form-control" name="ngdpprice" placeholder="Giá" value={newProduct.ngdpprice} onChange={handleChange} required />
+        <button type="submit" className="btn btn-primary">Thêm</button>
       </form>
     </div>
   );

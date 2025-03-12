@@ -2,36 +2,33 @@ import React, { useState } from "react";
 import NgdProductList from "./components/NgdProductList";
 import NgdProductAdd from "./components/NgdProductAdd";
 
-
-
 const NgdApp = () => {
-  //khởi tạo thành viên
-  const [members, setMembers] = useState([
-    { id: "230001", fullname: "Nguyễn Gia Duy", username: "Nguyen Duy", password: "123456" },
-    { id: "230002", fullname: "Trần Thị A", username: "A", password: "abcdef" },
-    { id: "230003", fullname: "Lê Văn B", username: "B", password: "qwerty" },
+  const [products, setProducts] = useState([
+    { ngdpid: "2310900031", ngdpname: "Nguyen Gia Duy", ngdpquantity: "10", ngdpprice: "1000000" },
+    { ngdpid: "230002", ngdpname: "Điện thoại ", ngdpquantity: "20", ngdpprice: "800000" },
+    { ngdpid: "230003", ngdpname: "Tai nghe ", ngdpquantity: "30", ngdpprice: "500000" },
   ]);
-//thêm mới
-  const addMember = (member) => {
-    setMembers([...members, member]);
-  };
-    // Hàm xóa thành viên theo ID
-    const removeMember = (id) => {
-      setMembers(members.filter(member => member.id !== id));
+
+  // Thêm sản phẩm mới
+  const addProduct = (product) => {
+    setProducts([...products, product]);
   };
 
-  // Hàm cập nhật thông tin thành viên
-  const updateMember = (updatedMember) => {
-    setMembers(members.map(member => (member.id === updatedMember.id ? updatedMember : member)));
+  // Xóa sản phẩm
+  const removeProduct = (ngdpid) => {
+    setProducts(products.filter(product => product.ngdpid !== ngdpid));
   };
 
+  // Cập nhật sản phẩm
+  const updateProduct = (updatedProduct) => {
+    setProducts(products.map(product => (product.ngdpid === updatedProduct.ngdpid ? updatedProduct : product)));
+  };
 
   return (
     <div className="container mt-4">
-      <h1 className="text-primary">Danh sách thành viên</h1>
-      <NgdProductList members={members} removeMember={removeMember} updateMember={updateMember}/>
-      <NgdProductAdd addMember={addMember}/>
-      
+      <h1 className="text-primary">Quản lý Sản Phẩm</h1>
+      <NgdProductList products={products} removeProduct={removeProduct} updateProduct={updateProduct} />
+      <NgdProductAdd addProduct={addProduct} />
     </div>
   );
 };
