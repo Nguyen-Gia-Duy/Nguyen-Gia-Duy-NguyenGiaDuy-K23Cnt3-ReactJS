@@ -4,7 +4,7 @@ import NgdProductAdd from "./components/NgdProductAdd";
 
 const NgdApp = () => {
   const [products, setProducts] = useState([
-    { ngdpid: "2310900031", ngdpname: "Nguyen Gia Duy", ngdpquantity: "10", ngdpprice: "1000000" },
+    { ngdpid: "2310900031", ngdpname: "Nguyen Gia Duy", ngdpquantity: "K23CNT3", ngdpprice: "1000000" },
     { ngdpid: "230002", ngdpname: "O to ", ngdpquantity: "20", ngdpprice: "800000" },
     { ngdpid: "230003", ngdpname: "Xe may ", ngdpquantity: "30", ngdpprice: "500000" },
   ]);
