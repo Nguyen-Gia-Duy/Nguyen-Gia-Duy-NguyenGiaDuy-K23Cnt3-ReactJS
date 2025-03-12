@@ -26,7 +26,7 @@ const NgdApp = () => {
 
   return (
     <div className="container mt-4">
-      <h1 className="text-primary">Quản lý Sản Phẩm</h1>
+      <h1 className="text-primary text-center">Quản lý Sản Phẩm - Nguyen Gia Duy -K23CNT3-Exam</h1>
       <NgdProductList products={products} removeProduct={removeProduct} updateProduct={updateProduct} />
       <NgdProductAdd addProduct={addProduct} />
     </div>

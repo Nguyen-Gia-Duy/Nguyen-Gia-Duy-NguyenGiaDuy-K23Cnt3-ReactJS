@@ -25,6 +25,7 @@ const NgdProductList = ({ products, removeProduct, updateProduct }) => {
             {editProductId === product.ngdpid ? (
               // Hiển thị form chỉnh sửa
               <>
+                
                 <input type="text" className="form-control me-2" value={updatedInfo.ngdpname} onChange={(e) => setUpdatedInfo({ ...updatedInfo, ngdpname: e.target.value })} />
                 <input type="number" className="form-control me-2" value={updatedInfo.ngdpquantity} onChange={(e) => setUpdatedInfo({ ...updatedInfo, ngdpquantity: e.target.value })} />
                 <input type="number" className="form-control me-2" value={updatedInfo.ngdpprice} onChange={(e) => setUpdatedInfo({ ...updatedInfo, ngdpprice: e.target.value })} />
