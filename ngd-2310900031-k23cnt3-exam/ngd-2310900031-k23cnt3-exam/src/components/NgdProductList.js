@@ -34,7 +34,7 @@ const NgdProductList = ({ products, removeProduct, updateProduct }) => {
             ) : (
               // Hiển thị thông tin sản phẩm
               <>
-                {product.ngdpname} - Số lượng: {product.ngdpquantity} - Giá: {product.ngdpprice}đ
+               {product.ngdpid}- {product.ngdpname} - Số lượng: {product.ngdpquantity} - Giá: {product.ngdpprice}đ
                 <div className="d-flex gap-1">
                   <button className="btn btn-warning me-2" onClick={() => handleEdit(product)}>Sửa</button>
                   <button className="btn btn-danger" onClick={() => removeProduct(product.ngdpid)}>Xóa</button>
