@@ -1,0 +1,25 @@
+{
+    "users":[
+        {
+            "fullname": "Nguyen Gia Duy",
+            "age": "20",
+            "class": "K23CNT3"
+        },
+        {
+            "fullname": "Nguyen Van A",
+            "age": "99",
+            "class": "K23CNT4"
+        },
+        {
+            "fullname": "Nguyen Thi B",
+            "age": "33",
+            "class": "K23CNT2"
+        }
+    ],
+    "students": [
+        {
+            "studentsId": "SV001",
+            "studentsName": "Nguyen Van D"
+        }
+    ]
+}
