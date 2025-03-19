@@ -38,7 +38,7 @@ export default function NgdCreateUser() {
                 </div>
                 <div className=' mb-1'>
                     <label for="ngdEmail">Email</label>
-                    <input type="text" name='ngdEmail' id="ngdEmail" 
+                    <input type="email" name='ngdEmail' id="ngdEmail" 
                      value={ngdEmail}
                      onChange={(ev)=>setNgdEmail(ev.target.value)}/>
                 </div>

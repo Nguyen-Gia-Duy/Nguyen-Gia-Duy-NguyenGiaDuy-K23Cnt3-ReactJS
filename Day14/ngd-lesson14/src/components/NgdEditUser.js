@@ -8,7 +8,8 @@ export default function NgdEditUser() {
         ngdFullName: '',
         ngdEmail: '',
         ngdPhone: '',
-        ngdActive: false
+        ngdActive1: false,
+        ngdActive2: true
     });
 
     const navigate = useNavigate();  // Dùng để chuyển hướng sau khi cập nhật
@@ -61,6 +62,12 @@ export default function NgdEditUser() {
                 <div className="mb-3 form-check">
                     <input type="checkbox" name="ngdActive" checked={user.ngdActive} onChange={handleChange} className="form-check-input" />
                     <label className="form-check-label">Hoạt động</label>
+                    
+                </div>
+                <div className="mb-3 form-check">
+                    <input type="checkbox" name="ngdActive" checked={user.ngdActive2} onChange={handleChange} className="form-check-input" />
+                    <label className="form-check-label">Khoa</label>
+                    
                 </div>
                 <button type="submit" className="btn btn-primary">Lưu thay đổi</button>
                 <button type="button" className="btn btn-secondary ms-2" onClick={() => navigate('/list-user')}>Hủy</button>
