@@ -29,8 +29,8 @@ export default function NgdListUser() {
                 <td>{ngd_item.ngdPhone}</td>
                 <td>{ngd_item.ngdActive?'Hoat dong':'Khoa'}</td>
                 <td>
-                    <Link to={`/edit-user/${ngd_item.ngdId}`}>Sua</Link>
-                    <button onClick={() => handleDelete(ngd_item.ngdId)}>Xoa</button>
+                    <Link to={`/edit-user/${ngd_item.ngdId}`} className='btn btn-primary'>Sua</Link>
+                    <button onClick={() => handleDelete(ngd_item.ngdId)} className='btn btn-success'>Xoa</button>
                 </td>
             </tr>
         )
